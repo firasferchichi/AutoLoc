@@ -20,4 +20,9 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private RoleEmployee role;
+
+    // --- Association ---
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "agence_id")
+    private Agence agence;
 }

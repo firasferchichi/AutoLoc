@@ -2,6 +2,7 @@ package AutoLoc.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
 
 @Entity
 @Table(name = "equipement")
@@ -13,4 +14,8 @@ public class Equipement {
 
     @Column(nullable = false, length = 100)
     private String libelle;
+
+    // --- Association ---
+    @ManyToMany(mappedBy = "equipements", fetch = FetchType.LAZY)
+    private List<Vehicle> vehicules;
 }

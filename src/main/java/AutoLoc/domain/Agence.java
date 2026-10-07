@@ -2,6 +2,7 @@ package AutoLoc.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
 
 @Entity
 @Table(name = "agence")
@@ -22,4 +23,11 @@ public class Agence {
 
     @Column(nullable = false, length = 20)
     private String telephone;
+
+    // --- Associations ---
+    @OneToMany(mappedBy = "agence", fetch = FetchType.LAZY)
+    private List<Vehicle> vehicules;
+
+    @OneToMany(mappedBy = "agence", fetch = FetchType.LAZY)
+    private List<Employee> employes;
 }

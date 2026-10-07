@@ -15,8 +15,13 @@ public class Maintenance {
     @Column(nullable = false)
     private LocalDate dateDebut;
 
-    private LocalDate dateFin; // Peut être null si la maintenance est en cours
+    private LocalDate dateFin;
 
     @Column(length = 255)
     private String description;
+
+    // --- Association ---
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @JoinColumn(name = "vehicule_id")
+    private Vehicle vehicule;
 }
