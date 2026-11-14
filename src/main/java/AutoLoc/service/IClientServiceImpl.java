@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class IclientServiceImp implements IClientService {
+public class IClientServiceImpl implements IClientService {
     private final ClientRepository clientRepository;
 
     @Override

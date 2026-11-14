@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class IContratServiceImp implements IContratService  {
-    private final ContratRepository contratRepository;
+    private final AutoLoc.service.ContratRepository contratRepository;
 
     @Override
     public Contrat ajouterContrat(Contrat contrat) {
