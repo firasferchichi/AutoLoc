@@ -8,3 +8,15 @@ AutoLoc est une application Spring Boot permettant de gérer la location de véh
 - **Agent d'agence** : Gère les locations et retours de véhicules au quotidien.
 - **Responsable d'agence** : Supervise l'activité de son agence et gère les véhicules.
 - **Administrateur** : Gère l'ensemble du système, les utilisateurs et les agences.
+
+## Features
+- Vehicle management
+- Customer management
+- Reservation management
+- Authentication
+
+## Technologies
+- Java
+- Spring Boot
+- MySQL
+- Maven
